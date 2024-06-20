@@ -1,3 +1,8 @@
+//@autor: Dylan Curay
+//@Fecha: 06 / 10 / 2024
+//@Version: 1.0
+//@Funcion: Damos las opciones para que el usuario deje una opinión sobre los productos que compro
+
 package Resena
 
 import (

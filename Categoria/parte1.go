@@ -1,3 +1,8 @@
+//@autor: Dylan Curay
+//@Fecha: 06 / 10 / 2024
+//@Version: 1.0
+//@Funcion: Definimos funciones de categorias para los productos
+
 package categoria
 
 import (

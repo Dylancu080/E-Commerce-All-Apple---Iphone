@@ -1,3 +1,8 @@
+//@autor: Dylan Curay
+//@Fecha: 06 / 10 / 2024
+//@Version: 1.0
+//@Funcion: Creamos nuevos pedidos, con funciones de actulizar y eliminar (Esto esta solo disponible para el desarrollador web)
+
 package pedidos
 
 import (

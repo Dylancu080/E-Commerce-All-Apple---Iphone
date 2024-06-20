@@ -1,3 +1,8 @@
+//@autor: Dylan Curay
+//@Fecha: 06 / 10 / 2024
+//@Version: 1.0
+//@Funcion: Separamos y definimos los tipos de entrega
+
 package entregapedido
 
 import "fmt"

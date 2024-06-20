@@ -1,3 +1,8 @@
+//@autor: Dylan Curay
+//@Fecha: 06 / 10 / 2024
+//@Version: 1.0
+//@Funcion: El usuario sera la cabeza para poder realizar todas las tareas, cada cuenta es distinta
+
 package usuario
 
 import (
