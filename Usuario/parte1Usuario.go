@@ -19,12 +19,10 @@ type Usuarios struct {
 	edad int
 	fechaNacimiento string
 }
-
 func (u *Usuarios) PresentarUsuario() {
-	fmt.Printf("Id: %v\nId Usuario: %v\nPrimer Nombre: %v\nPrimerApellido: %v\nSegundoApellido: %v\nEmail: %v\n
-					Contraseña: %v\nnumero: %v\nGenero: %v\nEdad: %v\nFechaNacimiento: %v\n ",
-					 u.userID, u.primerNombre, u.segundoNombre, u.primerapellido, u.segundoapellido, u.email,
-					u.password, u.numero, u.genero, u.edad, u.fechaNacimiento)
+    fmt.Printf("Id: %v\nId Usuario: %v\nPrimer Nombre: %v\nPrimer Apellido: %v\nSegundo Apellido: %v\nEmail: %v\nContraseña: %v\nNúmero: %v\nGénero: %v\nEdad: %v\nFecha de Nacimiento: %v\n",
+        u.userID, u.userID, u.primerNombre, u.primerApellido, u.segundoApellido, u.email,
+        u.password, u.numero, u.genero, u.edad, u.fechaNacimiento)
 }
 
 

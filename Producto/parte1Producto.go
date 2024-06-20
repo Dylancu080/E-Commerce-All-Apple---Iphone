@@ -1,8 +1,12 @@
 package producto
 
-import "errors"
+import (
+	"errors"
+	"fmt"
+)
 
 type Productos struct {
+	productoID     int
 	UserID         int
 	nombreProducto string
 	descripcion    string
@@ -10,21 +14,29 @@ type Productos struct {
 	categoria      string
 	stok           int
 }
+type ListaProductos struct {
+	lista []Productos
+}
 
 func agregarProducto(productos []Productos, nuevoProducto Productos) []Productos {
 	return append(productos, nuevoProducto)
 }
 
-func (u *Productos) actualizarProducto(nombreProducto, descripcion string, precio float64, stok int) {
-	u.nombreProducto = nombreProducto
-	u.descripcion = descripcion
-	u.precio = precio
-	u.stok = stok
+func (u *ListaProductos) actualizarProducto(nombreProducto, descripcion string, precio float64, stok int) {
+	for i := range u.lista {
+		if u.lista[i].nombreProducto == nombreProducto {
+			u.lista[i].descripcion = descripcion
+			u.lista[i].precio = precio
+			u.lista[i].stok = stok
+			return
+		}
+	}
+	fmt.Println("Producto no encontrado:", nombreProducto)
 }
 
-func removerProducto(productos []Productos, id int) ([]Productos, error) {
+func removerProducto(productos []Productos, productoID int) ([]Productos, error) {
 	for i, producto := range productos {
-		if producto.ID == id {
+		if producto.productoID == productoID {
 			return append(productos[:i], productos[i+1:]...), nil
 		}
 	}

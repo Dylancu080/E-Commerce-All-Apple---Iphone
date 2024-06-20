@@ -19,7 +19,7 @@ func (e *Entregas) EscogerTipoEntrega(cityOption int) {
 
 	e.deliveryCity = cities[cityOption-1]
 
-	if BadExpr {
+	if e.deliveryCity == "Quito" {
 		e.tipoEntrega = "Presencial"
 
 		meetingLocation := []string{"El condado Shopping", "Quicentro Shopping", "CCI"}
