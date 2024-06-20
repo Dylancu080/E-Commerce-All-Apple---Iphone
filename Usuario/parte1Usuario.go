@@ -3,7 +3,7 @@ package usuario
 import (
 	"errors"
 	"fmt"
-	usuario "main/Usuario"
+	"main/Usuario"
 )
 
 type Usuarios struct {
