@@ -1,44 +1,19 @@
-//@autor: Dylan Curay
-//@Fecha: 06 / 10 / 2024
-//@Version: 1.0
-//@Funcion: Definimos funciones de categorias para los productos
-
 package categoria
 
-import (
-	"errors"
-	"fmt"
-)
-
 type Categoria struct {
-	categoriaID     int
-	nombreCategoria string
+	ID     int
+	Nombre string
 }
 
-func agregarCategoria(categoria []Categoria, nuevaCategoria Categoria) []Categoria {
-	return append(categoria, nuevaCategoria)
-
+func agregar(c []Categoria, n Categoria) []Categoria {
+	return append(c, n)
 }
 
-func removerCategoria(categoria []Categoria, categoriaID int) ([]Categoria, error) {
-	for a, category := range categoria {
-		if category.categoriaID == categoriaID {
-			return append(categoria[:a], categoria[a+1:]...), nil
+func remover(c []Categoria, id int) []Categoria {
+	for i, cat := range c {
+		if cat.ID == id {
+			return append(c[:i], c[i+1:]...)
 		}
 	}
-	return categoria, errors.New("Categoria para eliminar no encontrada")
-}
-
-func actualizatCategoria(categoria []Categoria, categoriaActualizada Categoria) ([]Categoria, error) {
-	for a, category := range categoria {
-		if category.categoriaID == categoriaActualizada.categoriaID {
-			categoria[a] = categoriaActualizada
-			return categoria, nil
-		}
-	}
-	return categoria, errors.New("Categoria para actualizar no encontrada")
-}
-
-func (d Categoria) leerCategorias() {
-	fmt.Printf("ID: %d, nombre: %s", d.categoriaID, d.nombreCategoria)
+	return c
 }
