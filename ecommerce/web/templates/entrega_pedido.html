@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Entrega de Pedido</title>
+</head>
+<body>
+    <h1>Agregar Entrega de Pedido</h1>
+    <form action="/entregaPedido" method="post">
+        <label for="pedidoID">ID del Pedido:</label>
+        <input type="text" id="pedidoID" name="pedidoID"><br>
+
+        <label for="fechaEntrega">Fecha de Entrega:</label>
+        <input type="date" id="fechaEntrega" name="fechaEntrega"><br>
+
+        <label for="direccionEntrega">Dirección de Entrega:</label>
+        <input type="text" id="direccionEntrega" name="direccionEntrega"><br>
+
+        <input type="submit" value="Agregar Entrega de Pedido">
+    </form>
+</body>
+</html>

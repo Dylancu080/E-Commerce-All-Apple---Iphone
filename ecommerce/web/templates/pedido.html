@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Pedido</title>
+</head>
+<body>
+    <h1>Agregar Pedido</h1>
+    <form action="/pedido" method="post">
+        <label for="usuarioID">ID del Usuario:</label>
+        <input type="text" id="usuarioID" name="usuarioID"><br>
+
+        <label for="fechaPedido">Fecha del Pedido:</label>
+        <input type="date" id="fechaPedido" name="fechaPedido"><br>
+
+        <label for="estado">Estado del Pedido:</label>
+        <input type="text" id="estado" name="estado"><br>
+
+        <input type="submit" value="Agregar Pedido">
+    </form>
+</body>
+</html>

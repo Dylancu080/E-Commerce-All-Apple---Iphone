@@ -3,7 +3,7 @@
 //@Version: 1.0
 //@Funcion: Damos las opciones para que el usuario deje una opinión sobre los productos que compro
 
-package Resena
+package models
 
 import (
 	"errors"
@@ -12,11 +12,11 @@ import (
 )
 
 type Resenas struct {
-	resenaID     int
-	productoID   int
-	calificacion int
-	comentario   string
-	fechaResena  time.Time
+	ResenaID     int
+	ProductoID   int
+	Calificacion int
+	Comentario   string
+	FechaResena  time.Time
 }
 
 func AgregarResena(resenias []Resenas, nuevaResena Resenas) []Resenas {
@@ -25,7 +25,7 @@ func AgregarResena(resenias []Resenas, nuevaResena Resenas) []Resenas {
 
 func RemoverResena(resenias []Resenas, resenaID int) ([]Resenas, error) {
 	for i, resena := range resenias {
-		if resena.resenaID == resenaID {
+		if resena.ResenaID == resenaID {
 			return append(resenias[:i], resenias[i+1:]...), nil
 		}
 	}
@@ -34,5 +34,5 @@ func RemoverResena(resenias []Resenas, resenaID int) ([]Resenas, error) {
 
 func (r Resenas) ImprimirResena() {
 	fmt.Printf("Reseña ID: %d, Producto ID: %d, Calificación: %d, Comentario: %s, Fecha: %s\n",
-		r.resenaID, r.productoID, r.calificacion, r.comentario, r.fechaResena.Format("02-01-2006"))
+		r.ResenaID, r.ProductoID, r.Calificacion, r.Comentario, r.FechaResena.Format("02-01-2006"))
 }

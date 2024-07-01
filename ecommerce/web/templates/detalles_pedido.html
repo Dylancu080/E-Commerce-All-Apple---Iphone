@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Detalles de Pedido</title>
+</head>
+<body>
+    <h1>Agregar Detalles de Pedido</h1>
+    <form action="/detallesPedido" method="post">
+        <label for="pedidoID">ID del Pedido:</label>
+        <input type="text" id="pedidoID" name="pedidoID"><br>
+
+        <label for="productoID">ID del Producto:</label>
+        <input type="text" id="productoID" name="productoID"><br>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="text" id="cantidad" name="cantidad"><br>
+
+        <label for="precioUnitario">Precio Unitario:</label>
+        <input type="text" id="precioUnitario" name="precioUnitario"><br>
+
+        <input type="submit" value="Agregar Detalles de Pedido">
+    </form>
+</body>
+</html>
